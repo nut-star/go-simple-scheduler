@@ -3,7 +3,7 @@ Scheduler for run functions. Go.
 
 # Exmaples
 
-\```go
+```
 type PrintTask struct {
 	Message string
 }
@@ -24,4 +24,4 @@ taskScheduler.Stop()
 
 //inf execution, stop, when base flow stop
 taskScheduler.StartInf()
-\```
+```
