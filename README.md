@@ -1,7 +1,16 @@
 # go-simple-scheduler
 Scheduler for run functions. Go.
 
-Exmaples
+# Exmaples
+
+\```go
+type PrintTask struct {
+	Message string
+}
+
+func (p PrintTask) Execute() {
+	log.Info().Msg(p.Message)
+}
 
 t1 := PrintTask{Message: "Hello, Golang!"}
 t2 := PrintTask{Message: "Hello, World!"}
@@ -15,4 +24,4 @@ taskScheduler.Stop()
 
 //inf execution, stop, when base flow stop
 taskScheduler.StartInf()
-select {}
+\```
