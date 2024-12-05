@@ -1,4 +1,4 @@
-package schdeuler
+package scheduler
 
 import (
 	"time"
