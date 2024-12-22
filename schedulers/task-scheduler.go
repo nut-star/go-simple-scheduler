@@ -52,7 +52,7 @@ func (s *TaskScheduler) StartInf() {
 	go func() {
 		for range s.ticker.C {
 			for _, task := range s.RepeatedTasks {
-				task.Execute()
+				go task.Execute()
 			}
 		}
 	}()
