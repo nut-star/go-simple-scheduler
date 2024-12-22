@@ -36,7 +36,7 @@ func (s *TaskScheduler) Start() {
 				return
 			case <-s.ticker.C:
 				for _, task := range s.RepeatedTasks {
-					task.Execute()
+					go task.Execute()
 				}
 			}
 		}
